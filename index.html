@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SOEN357 Mini Project case study: MedMinder — medication and appointment reminders."
+    />
+    <title>SOEN357 Mini Project — MedMinder Case Study</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <p class="badge">SOEN357 • Mini Project</p>
+
+        <h1 class="title">MedMinder</h1>
+        <p class="subtitle">
+          A UX case study focused on reducing missed doses and forgotten
+          appointments through a clearer schedule, quick logging, and
+          low-friction planning.
+        </p>
+      </div>
+    </header>
+
+    <main id="content" class="container">
+      <aside class="toc" aria-label="Table of contents">
+        <h2 class="toc-title">Contents</h2>
+        <ol>
+          <li><a href="#problem">Understanding the problem</a></li>
+          <li><a href="#research">Research and Analysis</a></li>
+          <li><a href="#personas">Personas</a></li>
+          <li><a href="#journey">User Journey</a></li>
+          <li><a href="#storyboard">Storyboard</a></li>
+          <li><a href="#flow">User Flowchart</a></li>
+          <li><a href="#sketches">Sketches</a></li>
+          <li><a href="#wireframe">Wireframe</a></li>
+          <li><a href="#visual">Visual Design</a></li>
+          <li><a href="#final">Final Design</a></li>
+          <li><a href="#testing">Usability Testing</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </aside>
+
+      <article class="content">
+        <section id="problem" class="section">
+          <h2>Understanding the problem</h2>
+
+          <p>
+            More than half of adults in Canada take at least 1 prescription
+            medication each month. Following instructions and using medications
+            exactly as prescribed helps people stay as healthy as possible with
+            the least risk of harm. While medication routines are simple on
+            paper, in reality, they often clash with busy schedules, classes,
+            work and other responsibilities.
+          </p>
+
+          <p class="callout">
+            There are simply too many steps, too many reminders and too much
+            uncertainty.
+          </p>
+
+          <p>
+            At the same time, healthcare is increasingly self-managed between
+            appointments. People are expected to track dosages, refill
+            prescriptions and show up to their appointments prepared. Most rely
+            on a patchwork of different systems including alarms, notes, pill
+            bottles and calendars. In the end, the cognitive load of trying to
+            remember everything is frustrating.
+          </p>
+
+          <p>When tracking feels tedious, it gets dropped.</p>
+
+          <p>There is a gap in the market for a new approach.</p>
+        </section>
+
+        <section id="research" class="section">
+          <h2>Research and Analysis</h2>
+
+          <p>
+            In order to understand the pain points of adults regularly taking
+            one or more prescription medications, a survey was conducted. This
+            survey provides insights into the habits and struggles of potential
+            users. As the user success of the app is dependent on adherence, the
+            feedback received was vital to assess demand and test the idea prior
+            to development.
+          </p>
+
+          <p>
+            The goal behind the survey is to understand how often people miss
+            doses, what makes adherence hard and whether a medication and
+            appointment reminder app would be useful.
+          </p>
+
+          <div class="gallery grid-2" role="list">
+            <figure class="media" role="listitem">
+              <img
+                src="assets/357_Q1.png"
+                alt="Survey result: Question 1 chart"
+                loading="lazy"
+              />
+              <figcaption>Survey Q1</figcaption>
+            </figure>
+            <figure class="media" role="listitem">
+              <img
+                src="assets/357_Q2.png"
+                alt="Survey result: Question 2 chart"
+                loading="lazy"
+              />
+              <figcaption>Survey Q2</figcaption>
+            </figure>
+            <figure class="media" role="listitem">
+              <img
+                src="assets/357_Q3.png"
+                alt="Survey result: Question 3 chart"
+                loading="lazy"
+              />
+              <figcaption>Survey Q3</figcaption>
+            </figure>
+            <figure class="media" role="listitem">
+              <img
+                src="assets/357_Q4.png"
+                alt="Survey result: Question 4 chart"
+                loading="lazy"
+              />
+              <figcaption>Survey Q4</figcaption>
+            </figure>
+            <figure class="media" role="listitem">
+              <img
+                src="assets/357_Q5.png"
+                alt="Survey result: Question 5 chart"
+                loading="lazy"
+              />
+              <figcaption>Survey Q5</figcaption>
+            </figure>
+            <figure class="media" role="listitem">
+              <img
+                src="assets/357_Q6.png"
+                alt="Survey result: Question 6 chart"
+                loading="lazy"
+              />
+              <figcaption>Survey Q6</figcaption>
+            </figure>
+          </div>
+
+          <p>
+            The survey data highlighted multiple pain points concerning the
+            reasons for why people struggle with adherence to their medications.
+            These results will be referenced during the development in order to
+            create a product that aligns with the market demand.
+          </p>
+        </section>
+
+        <section id="personas" class="section">
+          <h2>Personas</h2>
+
+          <p>
+            The obtained survey data can be used to create several profiles of
+            possible users. These personas highlight user expectations, concerns
+            and other information. The following personas provide a helpful
+            representation of the target market which will allow for a more
+            personalized product and user experience.
+          </p>
+
+          <div class="gallery grid-3">
+            <figure class="media">
+              <img
+                src="assets/357_MayaPatel.png"
+                alt="Persona: Maya Patel"
+                loading="lazy"
+              />
+              <figcaption>Persona 1: Maya Patel</figcaption>
+            </figure>
+            <figure class="media">
+              <img
+                src="assets/357_RichardSekine.png"
+                alt="Persona: Richard Sekine"
+                loading="lazy"
+              />
+              <figcaption>Persona 2: Richard Sekine</figcaption>
+            </figure>
+            <figure class="media">
+              <img
+                src="assets/357_LindaChen.png"
+                alt="Persona: Linda Chen"
+                loading="lazy"
+              />
+              <figcaption>Persona 3: Linda Chen</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="journey" class="section">
+          <h2>User Journey</h2>
+
+          <p>
+            A user journey was created using the persona of Richard. The goal
+            behind this is to identify pain points and guide the creation of an
+            app that will address them directly.
+          </p>
+
+          <figure class="media">
+            <img
+              src="assets/357_UserJourney.png"
+              alt="User journey map for Richard"
+              loading="lazy"
+            />
+            <figcaption>User journey map</figcaption>
+          </figure>
+
+          <p>
+            This journey highlights Richard’s struggle to balance his
+            professional life and manage his health. From the journey, it’s
+            clear that he struggles with follow-through and overwhelm. He would
+            benefit from a solution that minimizes his cognitive load while
+            being portable and easily referenced while at work or during his
+            commute.
+          </p>
+        </section>
+
+        <section id="storyboard" class="section">
+          <h2>Storyboard</h2>
+
+          <figure class="media">
+            <img
+              src="assets/357_Storyboard.PNG"
+              alt="Storyboard showing the app concept in context"
+              loading="lazy"
+            />
+            <figcaption>Storyboard</figcaption>
+          </figure>
+        </section>
+
+        <section id="flow" class="section">
+          <h2>User Flowchart</h2>
+
+          <p>
+            This user flowchart presents the intuitive flow that will be
+            implemented in the app. With just a few taps, users should be able
+            to manage their adherence, medications list, confirmations and
+            doctor information.
+          </p>
+
+          <figure class="media">
+            <img
+              src="assets/357_UserFlowchart.png"
+              alt="User flowchart of key tasks"
+              loading="lazy"
+            />
+            <figcaption>User flowchart</figcaption>
+          </figure>
+        </section>
+
+        <section id="sketches" class="section">
+          <h2>Sketches</h2>
+
+          <p>
+            Using the user flow diagram as a guide, a preliminary sketch was
+            created. The purpose of this sketch is to act as a scaffolding and
+            provide a general idea of what the UI might look like.
+          </p>
+
+          <figure class="media">
+            <img
+              src="assets/357_Sketch.jpg"
+              alt="Early sketch of the interface layout"
+              loading="lazy"
+            />
+            <figcaption>Preliminary concept sketch</figcaption>
+          </figure>
+        </section>
+
+        <section id="wireframe" class="section">
+          <h2>Wireframe</h2>
+
+          <p>
+            Based on the sketches, a low-fidelity wireframe was created. The
+            wireframes are used to plan out the approximate position of the app
+            elements. The styling is not heavily considered at this point.
+          </p>
+
+          <figure class="media">
+            <img
+              src="assets/357_Wireframe.png"
+              alt="Low-fidelity wireframes"
+              loading="lazy"
+            />
+            <figcaption>Low-fidelity wireframe</figcaption>
+          </figure>
+        </section>
+
+        <section id="visual" class="section">
+          <h2>Visual Design</h2>
+
+          <h3>Color Palette</h3>
+          <figure class="media">
+            <img
+              src="assets/357_ColorPalette.png"
+              alt="Color palette swatches"
+              loading="lazy"
+            />
+            <figcaption>Color palette used</figcaption>
+          </figure>
+
+          <p>
+            The color palette was chosen based on several factors. Firstly, note
+            the use of Black and White. These are intentionally not absolute in
+            value to give them a more organic look and feel. The color blue was
+            chosen because it is calming and non-aggressive. Green and red are
+            used as indicators. Green confirms that the medication schedule was
+            adhered to and red is intended to be used for warnings, alerts and
+            incomplete fields. It is also used to indicate that a list item (eg:
+            a medication) can be removed from the list.
+          </p>
+
+          <h3>Typography used</h3>
+          <figure class="media">
+            <img
+              src="assets/357_Typography.png"
+              alt="Typography specimen showing Inter"
+              loading="lazy"
+            />
+            <figcaption>Typography</figcaption>
+          </figure>
+
+          <p>
+            Inter is an open source font designed specifically for digital
+            interfaces. Inter stays highly readable at small sizes. Since this
+            app relies on quickly scanning the interface to identify key info
+            like medication times, Inter’s clean letterforms and number clarity
+            will ensure readability and help prevent mistakes.
+          </p>
+
+          <h3>Icons</h3>
+          <p>
+            Icons were used in the design to highlight key areas and signify the
+            possibility of user interaction. Several icons were used and sourced
+            from iconbuddy.com
+          </p>
+        </section>
+
+        <section id="final" class="section">
+          <h2>Final Design</h2>
+
+          <figure class="media">
+            <img
+              src="assets/357_FinalDesign.png"
+              alt="High-fidelity final UI screens"
+              loading="lazy"
+            />
+            <figcaption>Final prototype screens</figcaption>
+          </figure>
+        </section>
+
+        <section id="testing" class="section">
+          <h2>Usability Testing</h2>
+
+          <p>
+            The goal behind a usability test is to evaluate if users can
+            complete the primary functions of the app using the prototype. The
+            test focuses on medication scheduling, logging a dose, adding a new
+            medication and booking an appointment with a doctor. The results
+            will be used to identify usability issues and guide iterative
+            improvements.
+          </p>
+
+          <p>
+            A sample of participants (5-10) representing the target audience
+            will complete moderated sessions using a think-aloud approach.They
+            will complete a set of tasks that include signing in, identifying
+            the next medication due, logging a taken dose and adding a new
+            medication with frequency and time etc.
+          </p>
+
+          <p>
+            For each task, the moderator will record the outcome, time spent on
+            the task and observable errors (eg: wrong inputs). The participants’
+            comments will be captured. Additionally, a post-testing survey will
+            be provided to gather feedback.
+          </p>
+
+          <p>
+            The findings will be organized into qualitative feedback grouped by
+            areas such as navigation, status understanding and readability.
+            These issues will be prioritized based on severity and addressed in
+            subsequent iterations of the product.
+          </p>
+        </section>
+
+        <section id="reflection" class="section">
+          <h2>Reflection</h2>
+
+          <p>
+            Following a structured UX design process helped transform an initial
+            idea based on user pain points into a clearer product that solves
+            specific user problems. It became clear which screen mattered the
+            most to users and what information had to be easily accessible.
+          </p>
+
+          <p>
+            The main challenge was balancing simplicity with the complexity of
+            medication management (eg: checking schedule, logging a dose, adding
+            new meds). This was mainly addressed by keeping a consistent
+            structure and ensuring that the pages were not cluttered with
+            information.
+          </p>
+        </section>
+
+        <section id="conclusion" class="section">
+          <h2>Conclusion</h2>
+
+          <p>
+            MedMinder is a mobile application designed to help users manage
+            their medications and appointments in a simple and reliable way. The
+            solution focuses on reducing the amount of missed doses and
+            forgotten appointments by combining a clear schedule view, an
+            organized medication list and an easy system to add new medications
+            and create reminders. The prototype demonstrates the core experience
+            and the key features required to encourage medication adherence.
+            Future improvements can be made to refine navigation and improve
+            overall accessibility. Overall, the solution is well-positioned to
+            enter the market and be used by users looking to streamline their
+            medication management.
+          </p>
+        </section>
+
+        <footer class="site-footer">
+          <p>© <span id="year"></span> Angad Singh</p>
+        </footer>
+      </article>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
